@@ -7,9 +7,10 @@ let reg2 = new RegExp(/[a-z]/, "ig")
 // Regex patter declaration
 const patterns = {
     telephone: /^\d{11}$/ig,
-    username: /\d/ig,
-    email: /\d/ig,
-    password: /\d/ig
+    username: /^[a-z\d]{5,12}$/i,
+    password: /^[\w@-]{8,20}$/,
+    slug: /^[a-z\d-]{8,20}$/,
+    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
 }
 
 // Validation function
